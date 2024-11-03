@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #A9DFBF;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #D5F5E3;
+    border: 1px solid #1E8449;
+}
+.header {
+    background-color: #1E8449;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.section {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #A9DFBF;
+    border: 1px solid #1E8449;
+}
+.section h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #1E8449;
+    color: white;
+    text-align: center;
+}
+.section p {
+    text-align: center;
+    font-size: 14px;
+}
+.section button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #1E8449;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.section input, .section select {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #1E8449;
+}
+.section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.section table, .section th, .section td {
+    border: 1px solid #1E8449;
+}
+.section th, .section td {
+    padding: 10px;
+    text-align: center;
+}
+.back-button {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #1E8449;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

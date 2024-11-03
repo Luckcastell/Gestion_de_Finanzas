@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\estilos.css">
+    <title>Financial Management</title><script>
+        function habilitarOpciones() {
+            // Obtener el select principal y el select de opciones
+            var selectPrincipal = document.getElementById("selectPrincipal");
+            var selectOpciones = document.getElementById("selectOpciones");
+
+            // Reiniciar el select de opciones
+            selectOpciones.innerHTML = ""; // Limpiar opciones
+
+            // Obtener el valor seleccionado
+            var valorSeleccionado = selectPrincipal.value;
+
+            // Habilitar opciones según la selección
+            if (valorSeleccionado === "opcion1") {
+                selectOpciones.innerHTML += '<option value="1">Sueldo</option>';
+            } else if (valorSeleccionado === "opcion2") {
+                selectOpciones.innerHTML += '<option value="2">Sm</option>';
+                selectOpciones.innerHTML += '<option value="3">Galeno</option>';
+            } else if (valorSeleccionado === "opcion3") {
+                selectOpciones.innerHTML += '<option value="4">Fabrica</option>';
+            } else if (valorSeleccionado === "opcion4") {
+                selectOpciones.innerHTML += '<option value="5">JubilacionM</option>';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Financial Management</h1>
+        </div>
+        <div class="section">
+            <h2>Ingresar ingresos</h2>
+            <label for="selectPrincipal">Ingrese la categoría:</label>
+            <select id="selectPrincipal" onchange="habilitarOpciones()">
+                <option value="">-- Selecciona --</option>
+                <option value="opcion1">Sueldo</option>
+                <option value="opcion2">Domicilo</option>
+                <option value="opcion3">Fabrica</option>
+                <option value="opcion4">JubilacionM</option>
+            </select>
+            <label for="selectOpciones">Ingrese la subcategoría:</label>
+            <select id="selectOpciones">
+                <option value="">-- Selecciona una opción --</option>
+            </select>
+
+            <label>Ingrese la cantidad gastada:</label>
+            <input type="number">
+            <label>Ingrese la fecha:</label>
+            <input type="date">
+            <button>Ingresar</button>
+
+            <br>
+            <form action="index.html" method="post">
+                <button class="back-button">Atrás</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

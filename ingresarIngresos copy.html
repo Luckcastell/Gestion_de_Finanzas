@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\estilos.css">
+    <title>Financial Management</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Financial Management</h1>
+        </div>
+        <div class="section">
+            <h2>Ingresar ingresos</h2>
+            <label>Ingrese la categoría:</label>
+            <select>                       
+                <option>sueldo</option>
+                <option>domicilo</option>
+                <option>fabrica</option>                       
+                <option>jubilacionM</option>
+            </select>
+            <label>Ingrese la subcategoría:</label>
+            <select>
+                <optgroup>sueldo
+                    <option>null</option>
+                </optgroup>
+                <optgroup>domicilo
+                    <option>sm</option>
+                    <option>galeno</option>
+                </optgroup>   
+                <optgroup>fabrica
+                    <option>null</option>
+                </optgroup>   
+                <optgroup>jubilacionM
+                    <option>null</option>
+                </optgroup>
+            </select>
+
+            <label>Ingrese la cantidad gastada:</label>
+            <input type="number">
+            <label>Ingrese la fecha:</label>
+            <input type="date">
+            <button>Ingresar</button>
+
+            <br>
+            <form action="index.html" method="post">
+                <button class="back-button">Atrás</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

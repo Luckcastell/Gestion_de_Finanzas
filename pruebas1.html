@@ -1,0 +1,202 @@
+<html>
+<head>
+    <title>Financial Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #A9DFBF;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #D5F5E3;
+            border: 1px solid #1E8449;
+        }
+        .header {
+            background-color: #1E8449;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #A9DFBF;
+            border: 1px solid #1E8449;
+        }
+        .section h2 {
+            margin: 0;
+            padding: 10px;
+            background-color: #1E8449;
+            color: white;
+            text-align: center;
+        }
+        .section p {
+            text-align: center;
+            font-size: 14px;
+        }
+        .section button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #1E8449;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .section input, .section select {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #1E8449;
+        }
+        .section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .section table, .section th, .section td {
+            border: 1px solid #1E8449;
+        }
+        .section th, .section td {
+            padding: 10px;
+            text-align: center;
+        }
+        .back-button {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #1E8449;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Financial Management</h1>
+        </div>
+        <div class="section">
+            <h2>Index</h2>
+            <button>Ingresar Gastos</button>
+            <p>"te dirige ala pagina ingresar gastos"</p>
+            <button>Ingresar Ingresos</button>
+            <p>"te dirige ala pagina ingresar ingresos"</p>
+            <button>Consultas</button>
+            <p>"te dirige ala pagina consultar"</p>
+        </div>
+        <div class="section">
+            <h2>Ingresar gastos</h2>
+            <label>Ingrese la categoría:</label>
+            <select>
+                <option>Despliga lista</option>
+            </select>
+            <label>Ingrese la subcategoría:</label>
+            <select>
+                <option>Despliga lista</option>
+            </select>
+            <label>Ingrese la cantidad gastada:</label>
+            <input type="text" value="4500">
+            <label>Ingrese la fecha:</label>
+            <input type="date">
+            <button>Ingresar</button>
+            <button class="back-button">Atrás</button>
+        </div>
+        <div class="section">
+            <h2>Ingresar ingresos</h2>
+            <label>Ingrese la categoría:</label>
+            <select>
+                <option>Despliga lista</option>
+            </select>
+            <label>Ingrese la subcategoría:</label>
+            <select>
+                <option>Despliga lista</option>
+            </select>
+            <label>Ingrese la cantidad gastada:</label>
+            <input type="text" value="4500">
+            <label>Ingrese la fecha:</label>
+            <input type="date">
+            <button>Ingresar</button>
+            <button class="back-button">Atrás</button>
+        </div>
+        <div class="section">
+            <h2>Consultas</h2>
+            <button>Consultar gastos</button>
+            <p>"te dirige ala pagina consultar gastos"</p>
+            <button>Consultar ingresos</button>
+            <p>"te dirige ala pagina consultar ingresos"</p>
+            <button class="back-button">Atrás</button>
+        </div>
+        <div class="section">
+            <h2>Consultar gastos</h2>
+            <label>Periodo:</label>
+            <button>Diario</button>
+            <button>Mensual</button>
+            <button>Anual</button>
+            <label>Ingresar fecha:</label>
+            <input type="date">
+            <label>Ingresar mes y año:</label>
+            <input type="text">
+            <label>Ingresar año:</label>
+            <input type="text">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Cantidad</th>
+                    <th>Categoría</th>
+                    <th>Subcategoría</th>
+                    <th>Fecha</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>4500</td>
+                    <td>Comida</td>
+                    <td>Restaurante</td>
+                    <td>2023-10-01</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+            <button class="back-button">Atrás</button>
+        </div>
+        <div class="section">
+            <h2>Consultar ingresos</h2>
+            <label>Periodo:</label>
+            <button>Diario</button>
+            <button>Mensual</button>
+            <button>Anual</button>
+            <label>Ingresar fecha:</label>
+            <input type="date">
+            <label>Ingresar mes y año:</label>
+            <input type="text">
+            <label>Ingresar año:</label>
+            <input type="text">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Cantidad</th>
+                    <th>Categoría</th>
+                    <th>Subcategoría</th>
+                    <th>Fecha</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>4500</td>
+                    <td>Salario</td>
+                    <td>Mensual</td>
+                    <td>2023-10-01</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+            <button class="back-button">Atrás</button>
+        </div>
+    </div>
+</body>
+</html>

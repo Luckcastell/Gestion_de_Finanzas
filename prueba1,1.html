@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Select Dinámico</title>
+    <script>
+        function habilitarOpciones() {
+            // Obtener el select principal y el select de opciones
+            var selectPrincipal = document.getElementById("selectPrincipal");
+            var selectOpciones = document.getElementById("selectOpciones");
+
+            // Reiniciar el select de opciones
+            selectOpciones.innerHTML = ""; // Limpiar opciones
+
+            // Obtener el valor seleccionado
+            var valorSeleccionado = selectPrincipal.value;
+
+            // Habilitar opciones según la selección
+            if (valorSeleccionado === "opcion1") {
+                selectOpciones.innerHTML += '<option value="1">Sueldo</option>';
+            } else if (valorSeleccionado === "opcion2") {
+                selectOpciones.innerHTML += '<option value="2">Sm</option>';
+                selectOpciones.innerHTML += '<option value="3">Galeno</option>';
+            } else if (valorSeleccionado === "opcion3") {
+                selectOpciones.innerHTML += '<option value="4">Fabrica</option>';
+            } else if (valorSeleccionado === "opcion4") {
+                selectOpciones.innerHTML += '<option value="5">JubilacionM</option>';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Ejemplo de Select Dinámico</h1>
+    
+    <label for="selectPrincipal">Ingrese la categoría:</label>
+    <select id="selectPrincipal" onchange="habilitarOpciones()">
+        <option value="">-- Selecciona --</option>
+        <option value="opcion1">Sueldo</option>
+        <option value="opcion2">Domicilo</option>
+        <option value="opcion3">Fabrica</option>
+        <option value="opcion3">JubilacionM</option>
+    </select>
+
+    <br><br>
+
+    <label for="selectOpciones">Ingrese la subcategoría:</label>
+    <select id="selectOpciones">
+        <option value="">-- Selecciona una opción --</option>
+    </select>
+
+</body>
+</html>
