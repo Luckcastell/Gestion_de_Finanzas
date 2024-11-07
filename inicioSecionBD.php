@@ -1,5 +1,5 @@
 <?php
-    session_start();            // Todo listo aca
+    session_start();           
     include('Conexion.php');
 
     if (isset($_POST['email']) && isset($_POST['clave']) ) {

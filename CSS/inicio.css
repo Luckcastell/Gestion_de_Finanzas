@@ -1,6 +1,6 @@
 body {
     /* background: radial-gradient(circle, #17a1fa 32%, #0011d0 100%); */
-    background: linear-gradient(#0011d0, #17a1fa);
+    background:#1E8449;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,14 +18,14 @@ form{
     width: 500px;
     border: 2px solid rgb(96, 126, 151);
     padding: 5rem;
-    background-color:white;
+    background-color:#A9DFBF;
     border: none;
     border-radius: 20px;
 }
 
 h1{
     display: block;
-    border: 2px solid white;
+    border: 2px solid #A9DFBF;
     /* width: 70%; */
     padding: 5px;
     margin: 5px;
@@ -49,15 +49,15 @@ input{
 }
 
 button{
-    background-color: #17a1fa;
+    background-color: #1E8449;
     padding: .8rem;
-    color: white;
+    color: #A9DFBF;
     border: none;
     width: 60%;
     border-radius: 10px;
 }
 button:hover{
-    background-color: #0095d0;
+    background-color: #1E8449;
 }
 
 a{
@@ -66,7 +66,7 @@ a{
     color: black;
 }
 a:hover{
-    color:rgb(121, 89, 65)#0095d0;
+    color:rgb(121, 89, 65)#1E8449;
 }
 
 .error{
