@@ -22,15 +22,15 @@
         $atributos = json_decode($respuesta, true);
 
         if(!$atributos['success']){
-            header("Location: inicioEmpleado.php?error=Verificar captcha");
+            header("Location: inicioSecion.php?error=Verificar captcha");
             exit();
         }
         elseif (empty($Empleado)) {
-            header("Location: inicioEmpleado.php?error=El Mail es requerido");
+            header("Location: inicioSecion.php?error=El Mail es requerido");
             exit();
         }
         elseif (empty($Clave)) {
-            header("Location: inicioEmpleado.php?error=La Clave es requerida");
+            header("Location: inicioSecion.php?error=La Clave es requerida");
             exit();
         }
         else{
@@ -38,28 +38,25 @@
             $sql = "SELECT * FROM empleados WHERE email = '$Empleado' AND clave = '$Clave'";
             $resultado = mysqli_query($conexion, $sql);
 
-            if (mysqli_num_rows($resultado) === 1) {
+            if (mysqli_num_rows($resultado) > 0) {
                 $row = mysqli_fetch_assoc($resultado);
-                if($row['email'] === $Empleado && $row['clave'] === $Clave){
-                    $_SESSION['email'] = $row['email'];
-                    $_SESSION['id_empleado'] = $row['id_empleado'];
-                    $_SESSION['email'] = $row['email'];
-                    header("Location: menu.html");
+        
+                // Verificar la contraseña
+                if (password_verify($Clave, $row['clave'])) {
+                    // Contraseña correcta, iniciar sesión
+                    $_SESSION['user_id'] = $row['id_empleado']; // O cualquier otro dato que necesites
+                    header("Location: dashboard.php"); // Redirige a la página principal o dashboard
+                    exit();
+                } else {
+                    header("Location: inicioSecion.php?error=Contraseña incorrecta");
                     exit();
                 }
-                else{
-                    header("Location: inicioEmpleado.php?error=El Usuario o la Clave son incorrectas");
-                    exit();
-                }
-            }
-            else{
-                header("Location: inicioEmpleado.php?error=El Usuario o la Clave son incorrectas");
+            } else {
+                header("Location: inicioSecion.php?error=Usuario no encontrado");
                 exit();
             }
-        }
-    }
-    else{
-        header("Location: inicioEmpleado.php");
+    }else{
+        header("Location: inicioSecion.php");
         exit();
     }
 
